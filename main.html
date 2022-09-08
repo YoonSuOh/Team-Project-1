@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>카딜러:이거보다 싼 중고차는 없었다</title>
+        <script></script>
+        <style>         
+            #body{
+                margin:150px;
+                margin-top:20px;
+            }
+            #header{
+                text-align:center;
+            }
+
+            #sign{
+                float:right;
+                margin : 0;
+                padding : 0 0 20px 10px;
+            }
+
+            #sign li{
+                padding :0;
+                margin:0;
+                display:inline;
+                list-style-type:none;
+            }
+
+            #sign a{
+                float:right;
+                font-weight:bold;
+                margin : 0 10px 4px 10px;
+                text-decoration:none;
+                font-size:8px;
+                color:Black;
+            }
+
+            #sign a:hover{
+                color:#696;
+            }
+
+            #nav{
+                float:left;
+                margin : 0;
+                padding : 0 0 20px 10px;
+            }
+            
+            #nav li{
+                padding :0;
+                margin:0;
+                display:inline;
+                list-style-type:none;
+            }
+
+            #nav a{
+                float:left;
+                font-weight:bold;
+                margin : 0 10px 4px 10px;
+                text-decoration:none;
+                font-size:18px;
+                color:Black;
+            }
+
+            #nav a.active, #nav a:hover{
+                color:#363;
+            }
+
+            #nav a:hover{
+                color:#696;
+            }
+
+            #ad{
+                align-content:center;
+                border-top-left-radius:15px;
+                border-top-right-radius:50px;
+                border-bottom-right-radius:15px;
+                border-bottom-left-radius:50px;
+                width:100%;
+                height:80%;
+            }
+
+            #main-search{   
+                float:right;
+                outline:none;
+                width:200px;
+                height:25px;
+                border-top-left-radius:10px;
+                border-top-right-radius:5px;
+                border-bottom-right-radius:5px;
+                border-bottom-left-radius:10px;
+                border-style:30px red;
+                font-size:15px;
+            }
+        </style>
+    </head>
+    <body id="body">
+            <ul id="sign">
+                <li><a href="login.html">로그인</a></li>
+                <li><a href="register.html">회원가입</a></li>
+            </ul>
+            <br>
+            <br>
+        <nav>
+            <ul id="nav">
+                <li><a href="logo.png">로고 </a></li>
+                <li><a href="menu.html">메뉴 </a></li>
+                <li><a href="carsell.html">내차팔기 </a></li>
+                <li><a href="carbuy.html">내차사기 </a></li>
+                <li><a>
+                        <div> 
+                            <form action="." method="post">
+                                <input id="main-search" type="txt" placeholder="검색어를 입력해 주세요">
+                             </form>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <br>
+        <br>
+        <section>
+            <img id="ad" src="AD.png">
+        </section>
+        <section class="main_article">
+            <article id="car_search"></article>
+            <article id="car_recommand"></article>
+            <article id="board"></article>
+        </section>
+        <footer>
+            <p>저작권 표시 부분</p>
+        </footer>
+    </body>
+</html>
