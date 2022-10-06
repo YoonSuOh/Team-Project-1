@@ -5,45 +5,93 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>소사모터스:누구보다 정직한 중고차</title>
         <style>
+            @font-face {
+                font-family:'InterparkGothic'; /*font 이름*/
+                font-style: 'normal';
+                src: url('InterparkGothicLight.ttf'); /* IE9 Compat Modes */
+            }
             .all_content{
+                font-family:'InterparkGothic';
                 margin:0;
-                width:2560px;
-                height:1440px;
+                width:1980px;
+                height:1020px;
             }
             .section1{
                 margin:0;
-                width:2560px;
-                height:360px;
+                width:1980px;
+                height:140px;
             }
             .main_nav{
-                width:1560px;
-                height:360px;
-                margin: 0px 500px 0px 500px;
+                width:1180px;
+                height:270px;
+                margin: 0px 400px 0px 400px;
                 display:block;
                 background-color:aqua;
             }
+            .sign{
+                list-style-type:none;
+                margin-left:1018px;
+            }
+            .sign li{
+                float:left;
+                padding-left:5px;
+            }
+            .logo{
+                position:absolute;
+                margin:20px 0px 0px 0px;
+            }
+            .logo_size{
+                width:40%;
+                height:40%;
+            }
+            .menu{
+                position:absolute;
+                list-style-type:none;
+                margin-left:190px;
+                margin-top:110px;
+            }
+            .menu li{
+                float:left;
+                padding-left:8px;
+                font-size:15pt;
+            }
+            .menu li a{
+
+            }
             .section2{
                 margin:0;
-                width:2560px;
-                height:360px;
+                width:1980px;
+                height:300px;
                 background-color:#F6F8FA;
             }
             .ad{
-                width:1560px;
-                height:360px;
-                margin: 0px 500px 0px 500px;
+                width:1180px;
+                height:300px;
+                margin: 0px 400px 0px 400px;
                 display:block;
                 background-color:rgb(120, 177, 177);
             }
+            .ad_size{
+                width:100%;
+                height:100%;
+            }
             .section3{
                 margin:0;
-                width:2560px;
-                height:360px;
+                width:1980px;
+                height:540px;
+            }
+            .car_search{
+                position:absolute;
+                margin: 0px 500px 0px 500px;
+                width:980px;
+                height:270px;
+                display:block;
+                background-color:blueviolet;
             }
             .section4{
                 margin:0;
-                width:2560px;
-                height:360px;
+                width:1980px;
+                height:300px;
                 background-color:#F6F8FA;
             }
         </style>
@@ -51,16 +99,37 @@
     <body class="all_content">
         <div class="section1">
             <div class="main_nav">
-
+                <div>
+                    <ul class="sign">
+                        <li>로그인 </li>
+                        <li> | </li>
+                        <li> 회원가입</li>
+                    </ul>
+                </div>
+                <div class="logo">
+                    <img class="logo_size" src="logo.png">
+                </div>
+                <div>
+                    <ul class="menu">
+                        <li>상세검색</li>
+                        <li>신고</li>
+                        <li>고객센터</li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="section2">
             <div class="ad">
-
+                <img class="ad_size" src="AD.png">
             </div>
         </div>
         <div class="section3">
-            
+            <div class="car_search">
+
+            </div>
+            <div class="car_search">
+                
+            </div>
         </div>
         <div class="section4">
             
