@@ -1,0 +1,51 @@
+Shared client As UdpClient
+    Shared receivePoint As IPEndPoint
+    Dim RX_Data As String
+    Dim PaintNow As Boolean
+    Dim WhiteBoard As New Bitmap(640, 480)
+    Dim PEER_X As Integer
+    Dim PEER_Y As Integer
+    Dim data As Byte()
+    Dim FIRST_RUN As Boolean
+    Dim PEN As New System.Drawing.Pen(Color.Red, 10)
+    Dim PEER_PEN As New System.Drawing.Pen(Color.Blue, 10)
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        receivePoint = New IPEndPoint(New IPAddress(0), 0)
+        client = New UdpClient(5000)
+        Dim thread As Thread = New Thread(New ThreadStart(AddressOf WaitForPackets))
+        thread.Start()
+        FIRST_RUN = True
+        Button1.Text = "메시지 송신"
+        Button2.Text = "종료"
+        Label1.Text = "메시지"
+        PaintNow = False
+        PictureBox1.Left = 0
+        PictureBox1.Top = 0
+        PictureBox1.Size = New System.Drawing.Size(640, 480)
+        PictureBox1.BorderStyle = BorderStyle.FixedSingle
+        Me.Width = 800
+        Me.Height = 600
+        ListBox1.Left = 0
+        ListBox1.Top = 485
+        ListBox1.Width = 200
+        Label1.Left = 250
+        Label1.Top = 485
+        TextBox1.Left = 300
+        TextBox1.Top = 485
+        Button1.Left = 300
+        Button1.Top = 510
+        Button2.Left = 310 + Button1.Width
+        Button2.Top = 510
+        ComboBox1.Left = 310 + TextBox1.Width
+        ComboBox1.Top = 485
+        ComboBox1.Items.Add("RED")
+        ComboBox1.Items.Add("GREEN")
+        ComboBox1.Items.Add("BLUE")
+        ComboBox1.SelectedIndex = 0
+        PEER_X = 0
+        PEER_Y = 0
+    End Sub
