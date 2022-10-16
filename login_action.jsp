@@ -25,7 +25,7 @@
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
 			script.println("alert('아이디를 입력하세요.');");
-			script.println("location.href='./login.jsp'");
+			script.println("location.href='login.jsp'");
 			script.println("</script>");
 			script.close();
 		}
@@ -34,7 +34,7 @@
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
 			script.println("alert('비밀번호를 입력하세요.');");
-			script.println("location.href='./login.jsp'");
+			script.println("location.href='login.jsp'");
 			script.println("</script>");
 			script.close();
 		}
@@ -65,7 +65,7 @@
 				PrintWriter script = response.getWriter();
 				script.println("<script>");
 				script.println("alert('비밀번호가 일치하지 않습니다.');");
-				script.println("location.href='./login.jsp'");
+				script.println("location.href='login.jsp'");
 				script.println("</script>");
 				script.close();
 			}
@@ -73,7 +73,7 @@
 				PrintWriter script = response.getWriter();
 				script.println("<script>");
 				script.println("alert('아이디가 일치하지 않습니다.');");
-				script.println("location.href='./login.jsp'");
+				script.println("location.href='login.jsp'");
 				script.println("</script>");
 				script.close();
 			}
@@ -82,7 +82,7 @@
 				session.setAttribute("id", id);
 				script.println("<script>");
 				script.println("alert('로그인 성공!');");
-				script.println("location.href='./main.jsp'");
+				script.println("location.href='main.jsp'");
 				script.println("</script>");
 				script.close();
 			}

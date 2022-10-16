@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>Script</title>
+    </head>
+    <body>
+        <select id="nation" name="nation"> region
+            <option value="">-- 국산/수입 --</option>
+            <option value="A">국산</option>
+            <option value="B">수입</option>
+          </select>
+          <select class="select_design" id="manufac" name="manufac"> maker
+            <option value="">-- 제조사 --</option>
+            <option class="A" value="hyundai">현대</option>
+            <option class="A" value="genesis">제네시스</option>
+            <option class="A" value="kia">기아</option>
+            <option class="A" value="chavolet">쉐보레</option>
+            <option class="B" value="samsung">르느삼성</option>
+            <option class="A" value="ssangyong">쌍용</option>
+            <option class="B" value="benz">벤츠</option>
+            <option class="B" value="bmw">BMW</option>
+          </select>
+          <select class="select_design" id="model" name="model"> size
+            <option value="">-- 모델 --</option>
+            <option value="avante" class="hyundai">아반떼</option>
+            <option value="sonata" class="hyundai">소나타</option>
+            <option value="grandeur" class="hyundai">그랜져</option>
+            <option value="i30" class="hyundai">i30</option>
+            <option value="i40" class="hyundai">i40</option>
+            <option value="venue" class="hyundai">베뉴</option>
+            <option value="kona" class="hyundai">코나</option>
+            <option value="tucsan" class="hyundai">투싼</option>
+            <option value="santafe" class="hyundai">싼타페</option>
+            <option value="pelisade" class="hyundai">펠리세이드</option>
+            <option value="g70" class="genesis">G70</option>
+            <option value="g80" class="genesis">G80</option>
+            <option value="g90" class="genesis">G90</option>
+            <option value="morning" class="kia">모닝</option>
+            <option value="ray" class="kia">레이</option>
+            <option value="k3" class="kia">K3</option>
+            <option value="k5" class="kia">K5</option>
+            <option value="k7" class="kia">K7</option>
+            <option value="k9" class="kia">K9</option>
+          </select>
+          <select class="select_design" id="detail" name="detail">
+            <option value="">-- 상세모델 --</option>
+            <option value="avante_n" class="avante">아반떼 N</option>
+            <option value="avante_cn7" class="avante">아반떼 CN7</option>
+            <option value="the_new_avante_ad" class="avante">더 뉴 아반떼 AD</option>
+            <option value="avante_ad" class="avante">아반떼 AD</option>
+            <option value="the_new_avante" class="avante">더 뉴 아반떼</option>
+            <option value="avante_md" class="avante">아반떼 MD</option>
+            <option value="the_new_k3" class="k3">더 뉴 K3</option>
+          </select>
+          <script src="//code.jquery.com/jquery.min.js"></script>
+          <script src='//cdnjs.cloudflare.com/ajax/libs/jquery-chained/1.0.1/jquery.chained.min.js'></script>
+          <script>
+            $("#manufac").chained("#nation");
+            $("#model").chained("#manufac");
+            $("#detail").chained("#model");
+        </script>
+    </body>
+</html>
