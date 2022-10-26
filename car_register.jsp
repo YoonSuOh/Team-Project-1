@@ -7,7 +7,7 @@
 <title>차량 등록</title>
 </head>
 <body>
-	<form action="car_register_action.jsp" method="post">
+	<form action="car_register_action.jsp" method="post" enctype="multipart/form-data">
 		<p>1. 차량번호 입력</p>
 		<input type="text" name="car_num" value="예) 123가 1234">
 		<br>
@@ -56,6 +56,15 @@
 		<br>
 		<p>10. 판매자 ID 입력</p>
 		<input type="text" name="dealer_id">
+		<br>
+		<p>11. 차량 사진 업로드</p>
+		사진 1 : <input type="file" name="pic1">
+		<br>
+		사진 2 : <input type="file" name="pic2">
+		<br>
+		사진 3 : <input type="file" name="pic3">
+		<br>
+		사진 4 : <input type="file" name="pic4">
 		<br>
 		<input type="submit" value="등록">
 	</form>
