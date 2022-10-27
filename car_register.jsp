@@ -61,24 +61,6 @@
 		<p>등록 순서 : 전면부 -> 측전면부 -> 후면부 -> 측후면부 -> 측면부 -> 클러스터 -> 핸들 -> 핸들 좌/우측 레버 -> 시동부 -> 기어레버 -> 네비게이션 -> 블랙박스 -> 운전석 -> 트렁크 내부 -> 엔진룸 -> 차량 하부</p>
 		사진 등록(차량 전면부)<input type="file" name="car_1"><br>
 		사진 등록(차량 측전면부)<input type="file" name="car_2"><br>
-		사진 등록(차량 후면부)<input type="file" name="car_3"><br>
-		사진 등록(차량 측후면부)<input type="file" name="car_4"><br>
-		사진 등록(차량 측면부)<input type="file" name="car_5"><br>
-		사진 등록(클러스터)<input type="file" name="car_6"><br>
-		사진 등록(핸들 좌측)<input type="file" name="car_7"><br>
-		사진 등록(핸들 전체)<input type="file" name="car_8"><br>
-		사진 등록(핸들 우측)<input type="file" name="car_9"><br>
-		사진 등록(핸들 좌측 레버)<input type="file" name="car_10"><br>
-		사진 등록(시동부)<input type="file" name="car_11"><br>
-		사진 등록(기어 레버)<input type="file" name="car_12"><br>
-		사진 등록(네비게이션(지도))<input type="file" name="car_13"><br>
-		사진 등록(네비게이션(후방카메라))<input type="file" name="car_14"><br>
-		사진 등록(네비게이션(메뉴))<input type="file" name="car_15"><br>
-		사진 등록(블랙박스)<input type="file" name="car_16"><br>
-		사진 등록(운전석 전면부)<input type="file" name="car_17"><br>
-		사진 등록(트렁크 내부)<input type="file" name="car_18"><br>
-		사진 등록(엔진)<input type="file" name="car_19"><br>
-		사진 등록(차량 하부)<input type="file" name="car_20">
 		<br>
 		<input type="submit" value="등록">
 	</form>
