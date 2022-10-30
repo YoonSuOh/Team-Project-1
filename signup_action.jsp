@@ -20,8 +20,8 @@
 		
 		Connection con = null; 
 		PreparedStatement pstmt = null; 
-		String url = "jdbc:oracle:thin:@localhost:1521:orcl";
-		String user = "HR", pw = "1234";
+		String url = "jdbc:oracle:thin:@localhost:1521:xe";
+		String user = "YOON", pw = "3304";
 		
 		Class.forName("oracle.jdbc.OracleDriver");
 		con = DriverManager.getConnection(url, user, pw);
@@ -45,6 +45,6 @@
 </body>
 <script>
 alert("축하합니다. 회원가입을 완료하였습니다!");
-location.href = 'main.html'
+location.href = 'main.jsp'
 </script>
 </html>

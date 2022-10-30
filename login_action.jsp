@@ -42,8 +42,8 @@
 		if(!id.equals("")&&!pw.equals("")){
 			Connection con = null; 
 			PreparedStatement pstmt = null; 
-			String url = "jdbc:oracle:thin:@localhost:1521:orcl";
-			String user = "HR", db_pw = "1234";
+			String url = "jdbc:oracle:thin:@localhost:1521:xe";
+			String user = "YOON", db_pw = "3304";
 			
 			Class.forName("oracle.jdbc.OracleDriver");
 			con = DriverManager.getConnection(url, user, db_pw);

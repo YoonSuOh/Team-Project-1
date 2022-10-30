@@ -39,7 +39,9 @@
                             <li>|</li>
                             <li><a href="board_report.jsp">신고</a></li>
                             <li>|</li>
-                            <li><a href="board_report.jsp">고객센터(구현 예정)</a></li>
+                            <li><a href="carlist.jsp">전체 차량 보기</a></li>
+                            <li>|</li>
+                            <li><a href="board.jsp">게시판</a></li>
                         </ul>
                     </div>
                 </div>
@@ -52,8 +54,8 @@
             <div class="section3">
                 <div class="car_search">
                     <p class="search_text">원하시는 차가 있으신가요?</p>
-                    <form action="car_search.jsp">
-                        <input class="car_searchbar" type="search" placeholder="모델명을 입력해주세요. 예)올 뉴 K3">
+                    <form action="carboard.jsp">
+                        <input class="car_searchbar" type="search" name="model" placeholder="모델명을 입력해주세요. 예)올 뉴 K3">
                     </form>
                 </div>
                 <div class="car_search_choice">
@@ -61,7 +63,7 @@
                         <ul class="choice_menu_ul">
                             <li class="tab-link current" data-tab="tab-1">차 이름을 알고 있어요</li>
                             <li class="tab-link" data-tab="tab-2">가격이 싼 차를 사고 싶어요</li>
-                            <li class="tab-link" data-tab="tab-3">차종별로 찾고 있어요</li>
+                            <li class="tab-link" data-tab="tab-3">차종.연식별로 찾고 있어요</li>
                         </ul>
                     </div>
                 </div>
@@ -141,7 +143,7 @@
                                 <option value="grandeur_hg" class="grandeur">그랜저 HG</option>
                                 <option value="grandeur_tg" class="grandeur">그랜저 TG</option>
                                 <option value="i30_pd" class="i30">i30(PD)</option>
-                                <option value="the_new_i30" class="i30">i30(PD)</option>
+                                <option value="the_new_i30" class="i30">더 뉴 i30</option>
                                 <option value="new_i30" class="i30">i30(신형)</option>
                                 <option value="_i30" class="i30">i30</option>
                                 <option value="_venue" class="venue">베뉴</option>
@@ -203,32 +205,196 @@
                         </select>
                         <select class="select_design"name="choice_search">
                             <option value="" disabled selected>최저가격</option>
-                            <option value="아반떼">아반떼</option>>
-                            <option value="소나타">소나타</option>
-                            <option value="그랜져">그랜져</option>
-                            <option value="i30">i30</option>
-                            <option value="i40">i40</option>
-                            <option value="베뉴">베뉴</option>
-                            <option value="코나">코나</option>
-                            <option value="투싼">투싼</option>
-                            <option value="펠리세이드">펠리세이드</option>
+                            <option value="0">0</option>
+                            <option value="100">100</option>
+                            <option value="200">200</option>
+                            <option value="300">300</option>
+                            <option value="400">400</option>
+                            <option value="500">500</option>
+                            <option value="600">600</option>
+                            <option value="700">700</option>
+                            <option value="800">800</option>
+                            <option value="900">900</option>
+                            <option value="1000">1,000</option>
+                            <option value="1100">1,100</option>
+                            <option value="1200">1,200</option>
+                            <option value="1300">1,300</option>
+                            <option value="1400">1,400</option>
+                            <option value="1500">1,500</option>
+                            <option value="1600">1,600</option>
+                            <option value="1700">1,700</option>
+                            <option value="1800">1,800</option>
+                            <option value="1900">1,900</option>
+                            <option value="2000">2,000</option>
+                            <option value="2100">2,100</option>
+                            <option value="2200">2,200</option>
+                            <option value="2300">2,300</option>
+                            <option value="2400">2,400</option>
+                            <option value="2500">2,500</option>
+                            <option value="2600">2,600</option>
+                            <option value="2700">2,700</option>
+                            <option value="2800">2,800</option>
+                            <option value="2900">2,900</option>
+                            <option value="3000">3,000</option>
+                            <option value="3100">3,100</option>
+                            <option value="3200">3,200</option>
+                            <option value="3300">3,300</option>
+                            <option value="3400">3,400</option>
+                            <option value="3500">3,500</option>
+                            <option value="3600">3,600</option>
+                            <option value="3700">3,700</option>
+                            <option value="3800">3,800</option>
+                            <option value="3900">3,900</option>
+                            <option value="4000">4,000</option>
+                            <option value="4100">4,100</option>
+                            <option value="4200">4,200</option>
+                            <option value="4300">4,300</option>
+                            <option value="4400">4,400</option>
+                            <option value="4500">4,500</option>
+                            <option value="4600">4,600</option>
+                            <option value="4700">4,700</option>
+                            <option value="4800">4,800</option>
+                            <option value="4900">4,900</option>
+                            <option value="5000">5,000</option>
+                            <option value="6000">6,000</option>
+                            <option value="7000">7,000</option>
+                            <option value="8000">8,000</option>
+                            <option value="9000">9,000</option>
+                            <option value="10000">10,000</option>
                         </select>
                         <select class="select_design" name="choice_search">
                             <option value="" disabled selected>최고가격</option>
-                            <option value="아반떼 N">아반떼 N</option>>
-                            <option value="소나타">아반떼(CN7)</option>
-                            <option value="그랜져">더 뉴 아반떼 AD</option>
-                            <option value="i30">아반떼 AD</option>
-                            <option value="i40">더 뉴 아반떼</option>
-                            <option value="베뉴">아반떼 MD</option>
-                            <option value="코나">아반떼 하이브리드</option>
+                            <option value="0">0</option>
+                            <option value="100">100</option>
+                            <option value="200">200</option>
+                            <option value="300">300</option>
+                            <option value="400">400</option>
+                            <option value="500">500</option>
+                            <option value="600">600</option>
+                            <option value="700">700</option>
+                            <option value="800">800</option>
+                            <option value="900">900</option>
+                            <option value="1000">1,000</option>
+                            <option value="1100">1,100</option>
+                            <option value="1200">1,200</option>
+                            <option value="1300">1,300</option>
+                            <option value="1400">1,400</option>
+                            <option value="1500">1,500</option>
+                            <option value="1600">1,600</option>
+                            <option value="1700">1,700</option>
+                            <option value="1800">1,800</option>
+                            <option value="1900">1,900</option>
+                            <option value="2000">2,000</option>
+                            <option value="2100">2,100</option>
+                            <option value="2200">2,200</option>
+                            <option value="2300">2,300</option>
+                            <option value="2400">2,400</option>
+                            <option value="2500">2,500</option>
+                            <option value="2600">2,600</option>
+                            <option value="2700">2,700</option>
+                            <option value="2800">2,800</option>
+                            <option value="2900">2,900</option>
+                            <option value="3000">3,000</option>
+                            <option value="3100">3,100</option>
+                            <option value="3200">3,200</option>
+                            <option value="3300">3,300</option>
+                            <option value="3400">3,400</option>
+                            <option value="3500">3,500</option>
+                            <option value="3600">3,600</option>
+                            <option value="3700">3,700</option>
+                            <option value="3800">3,800</option>
+                            <option value="3900">3,900</option>
+                            <option value="4000">4,000</option>
+                            <option value="4100">4,100</option>
+                            <option value="4200">4,200</option>
+                            <option value="4300">4,300</option>
+                            <option value="4400">4,400</option>
+                            <option value="4500">4,500</option>
+                            <option value="4600">4,600</option>
+                            <option value="4700">4,700</option>
+                            <option value="4800">4,800</option>
+                            <option value="4900">4,900</option>
+                            <option value="5000">5,000</option>
+                            <option value="6000">6,000</option>
+                            <option value="7000">7,000</option>
+                            <option value="8000">8,000</option>
+                            <option value="9000">9,000</option>
+                            <option value="10000">10,000</option>
                         </select>
                         <input class="search_button_design" type="submit" value="검색">
                     </form>
                 </div>
                 <div id="tab-3" class="choice_list">
                     <form class="choice_list_design" action="choise_search.jsp" method="post" name="car_choice">
-                        구현예정
+                        <select class="select_design_country" name="choice_search">
+                            <option value="국산" selected>국산</option>
+                            <option value="수입">수입</option>
+                        </select>
+                        <select class="select_design" name="choice_search">
+                            <option value="" disabled selected>차종선택</option>
+                            <option value="차종선택"></option>
+                            <option value="경차">경차</option>
+                            <option value="소형">소형</option>
+                            <option value="준중형">준중형</option>
+                            <option value="중형">중형</option>
+                            <option value="준대형">준대형</option>
+                            <option value="대형">대형</option>
+                            <option value="SUV">SUV</option>
+                            <option value="RV">RV</option>
+                            <option value="화물/버스">화물/버스</option>
+                        </select>
+                        <select class="select_design"name="choice_search">
+                            <option value="" disabled selected>최소연식</option>
+                            <option value="2000">2000</option>
+                            <option value="2001">2001</option>
+                            <option value="2002">2002</option>
+                            <option value="2003">2003</option>
+                            <option value="2004">2004</option>
+                            <option value="2005">2005</option>
+                            <option value="2006">2006</option>
+                            <option value="2007">2007</option>
+                            <option value="2008">2008</option>
+                            <option value="2009">2009</option>
+                            <option value="2010">2010</option>
+                            <option value="2011">2011</option>
+                            <option value="2012">2012</option>
+                            <option value="2013">2013</option>
+                            <option value="2014">2014</option>
+                            <option value="2015">2015</option>
+                            <option value="2016">2016</option>
+                            <option value="2017">2017</option>
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                        </select>
+                        <select class="select_design"name="choice_search">
+                            <option value="" disabled selected>최대연식</option>
+                            <option value="2000">2000</option>
+                            <option value="2001">2001</option>
+                            <option value="2002">2002</option>
+                            <option value="2003">2003</option>
+                            <option value="2004">2004</option>
+                            <option value="2005">2005</option>
+                            <option value="2006">2006</option>
+                            <option value="2007">2007</option>
+                            <option value="2008">2008</option>
+                            <option value="2009">2009</option>
+                            <option value="2010">2010</option>
+                            <option value="2011">2011</option>
+                            <option value="2012">2012</option>
+                            <option value="2013">2013</option>
+                            <option value="2014">2014</option>
+                            <option value="2015">2015</option>
+                            <option value="2016">2016</option>
+                            <option value="2017">2017</option>
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                        </select>
                         <input class="search_button_design" type="submit" value="검색">
                     </form>
                 </div>
@@ -270,9 +436,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="section5">
-        	<p>게시판 추후 개발 예정(2022.11)</p>
         </div>
         <div class="footer">
             <br>
