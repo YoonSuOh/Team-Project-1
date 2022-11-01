@@ -1,8 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <!DOCTYPE html>
-<html lang="ko">
-
+<html>
 <head>
     <meta charset="UTF-8">
     <title>로그인</title>
@@ -40,7 +38,7 @@
 
         .btn {
             margin-left: 25px;
-            background-color: #87CEEB;
+            background-color: skyblue;
             border-color: transparent;
             color: white;
             transition: 0.4s;
@@ -84,7 +82,7 @@
         }
 
         #menu a:hover {
-            color: #87CEEB;
+            color: #363;
             text-decoration: none;
         }
 
@@ -94,15 +92,14 @@
         }
     </style>
 </head>
-
 <body>
     <div class="main">
         <img src="logo.png" class="logo">
         <div>
         <form action="login_action.jsp" method="post">
-            <input type="text" name="id" placeholder="아이디를 입력하세요." class="account">
-            <input type="password" name="pw" placeholder="비밀번호를 입력하세요." class="account">
-            <input type="submit" class="btn" value="등록">
+            <input type="text" placeholder="ID" name="USER_ID" class="account">
+            <input type="password" placeholder="PW" name="USER_PW" class="account">
+            <button class="btn">로그인</button>
         </form>
             <p id="alert" class="account"></p>
             <nav id="menu">
@@ -111,11 +108,10 @@
                     <li>&nbsp|&nbsp</li>
                     <li><a href="find_pw.html">PW찾기</a></li>
                     <li>&nbsp|&nbsp</li>
-                    <li><a href="signup.html">회원가입</a></li>
+                    <li><a href="signup.jsp">회원가입</a></li>
                 </ul>
             </nav>
         </div>
     </div>
 </body>
-
 </html>
