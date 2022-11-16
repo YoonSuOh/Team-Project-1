@@ -1,6 +1,7 @@
 package Members;
 
 import java.sql.*;
+
 public class MembersDAO {
 	private Connection conn;
 	private PreparedStatement pstmt;
@@ -18,7 +19,7 @@ public class MembersDAO {
 		}
 	}
 	
-	public int login(String USER_ID, String USER_PW) {
+	public int login(String USER_ID, String USER_PW, String USER_PERM) {
 		String sql = "SELECT USER_PW FROM MEMBERS WHERE USER_ID=?";
 		try{/* 쿼리문 */
 	        pstmt = conn.prepareStatement(sql); /*conn으로 연결한뒤 , statement로 값을 넘긴다,쿼리문을 실행한다.  */
@@ -54,5 +55,36 @@ public class MembersDAO {
 		}
 		return -1;
 	}
+	
+	public String find_id(String USER_NAME, String USER_EMAIL) {
+		String id = null;
+		String sql = "SELECT USER_ID FROM MEMBERS WHERE USER_NAME=? AND USER_EMAIL=?";
+		try{/* 쿼리문 */
+	        pstmt = conn.prepareStatement(sql); /*conn으로 연결한뒤 , statement로 값을 넘긴다,쿼리문을 실행한다.  */
+	        pstmt.setString(1, USER_NAME);/*쿼리문에 1번쨰 ?로 입력 될 값 id가 들어간다.  */
+	        pstmt.setString(2, USER_EMAIL);
+	        rs = pstmt.executeQuery();/*execute(실행한다)Query를 */
+	        if(rs.next()) {
+	        	id = rs.getString("USER_ID");
+	        }
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return id;
+	}
+	public String find_pw(String USER_ID) {
+		String id = null;
+		String sql = "SELECT USER_PW FROM MEMBERS WHERE USER_ID=?";
+		try{/* 쿼리문 */
+	        pstmt = conn.prepareStatement(sql); /*conn으로 연결한뒤 , statement로 값을 넘긴다,쿼리문을 실행한다.  */
+	        pstmt.setString(1, USER_ID);/*쿼리문에 1번쨰 ?로 입력 될 값 id가 들어간다.  */
+	        rs = pstmt.executeQuery();/*execute(실행한다)Query를 */
+	        if(rs.next()) {
+	        	id = rs.getString("USER_ID");
+	        }
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return id;
+	}
 }
-
