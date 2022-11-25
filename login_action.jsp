@@ -5,6 +5,7 @@
 <jsp:useBean id="Members" class="Members.Members" scope="page"/>
 <jsp:setProperty name="Members" property="USER_ID" />
 <jsp:setProperty name="Members" property="USER_PW" />
+<jsp:setProperty name="Members" property="USER_PERM" />
 <!DOCTYPE>
 <html>
     <head>
@@ -13,10 +14,11 @@
 <body>
 	<%
     	MembersDAO membersDAO = new MembersDAO();
-		int result = membersDAO.login(Members.getUSER_ID(), Members.getUSER_PW());
+		int result = membersDAO.login(Members.getUSER_ID(), Members.getUSER_PW(), Members.getUSER_PERM());
 		
 		if(result == 1){
 			session.setAttribute("USER_ID", Members.getUSER_ID());
+			session.setAttribute("USER_PERM", Members.getUSER_PERM());
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
 			script.println("alert('로그인 성공')");

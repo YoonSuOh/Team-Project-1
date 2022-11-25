@@ -1,329 +1,326 @@
-@charset "UTF-8";
-    @font-face {
-                    font-family:'InterparkGothic'; /*font 이름*/
-                    font-style: 'normal';
-                    src: url('InterparkGothicLight.ttf'); /* IE9 Compat Modes */
-                }   
-                @font-face {
-                    font-family:'InterparkGothicBold'; /*font 이름*/
-                    font-style: 'normal';
-                    src: url('InterparkGothicBold.ttf'); /* IE9 Compat Modes */
-                } 
-                #all_content{
-                    font-family:'InterparkGothicBold';
-                    margin:0;
-                    width:1920px;
-                    height:1080px;
-                }
-                .section1{
-                    margin:0;
-                    width:1920px;
-                    height:216px;
-                }
-                    .main_nav{
-                        width:1120px;
+        @charset "UTF-8";
+        @font-face {
+                        font-family:'InterparkGothic'; /*font 이름*/
+                        font-style: 'normal';
+                        src: url('InterparkGothicLight.ttf'); /* IE9 Compat Modes */
+                    }   
+                    @font-face {
+                        font-family:'InterparkGothicBold'; /*font 이름*/
+                        font-style: 'normal';
+                        src: url('InterparkGothicBold.ttf'); /* IE9 Compat Modes */
+                    } 
+                    #all_content{
+                        font-family:'InterparkGothicBold';
+                        margin:0;
+                        width:1920px;
+                        height:1080px;
+                    }
+                    .section1{
+                        margin:0;
+                        width:1920px;
                         height:216px;
-                        margin: 0px 400px 0px 400px;
-                        display:block;
                     }
-                    .sign{
-                        margin-top:40px;
-                        list-style-type:none;
-                        float:right;
+                        .main_nav{
+                            width:1120px;
+                            height:216px;
+                            margin: 0px 400px 0px 400px;
+                            display:block;
+                        }
+                        .sign{
+                            margin-top:40px;
+                            list-style-type:none;
+                            float:right;
+                        }
+                        .sign li{
+                            float:left;
+                            padding-left:5px;
+                        }
+                        .sign a{
+                            text-decoration:none;
+                            font-size:15px;
+                            color:Black;
+                        }
+        
+                        .sign a:hover{
+                            color:#87CEEB;
+                        }
+                        .logo{
+                            position:absolute;
+                            margin:72px 0px 0px 0px;
+                        }
+                        .logo_size{
+                            width:40%;
+                            height:40%;
+                        }
+                        ul{
+                        	list-style-type:none;
+                        }
+                        .menu{
+                            position:absolute;
+                            list-style-type:none;
+                            margin-left:190px;
+                            margin-top:160px;
+                        }
+                        .menu li{
+                            float:left;
+                            padding-left:8px;
+                            font-size:15pt;
+                        }
+                        .menu a{
+                            float:left;
+                            text-decoration:none;
+                            font-size:22px;
+                            color:Black;
+                        }
+        
+                        .menu a.active,.menu a:hover{
+                            color:#87CEEB;
+                        }
+                    .section2{
+                        margin:0;
+                        width:1920px;
+                        height:540px;
                     }
-                    .sign li{
-                        float:left;
-                        padding-left:5px;
+                        .ad{
+                            width:1120px;
+                            height:540px;
+                            margin: 0px 400px 0px 400px;
+                            display:block;
+                            background-color:rgb(120, 177, 177);
+                        }
+                        .ad_size{
+                            width:100%;
+                            height:100%;
+                        }
+                    .section3{
+                        margin:0;
+                        width:1920px;
+                        height:540px;
+                        background-color:#F6F8FA;
                     }
-                    .sign a{
-                        text-decoration:none;
-                        font-size:15px;
-                        color:Black;
+                        .search_text{
+                            margin-top:80px;
+                            font-family:'InterparkGothicBold';
+                            text-align:center;
+                            font-size:26pt;
+                            font-weight:700;
+                        }
+                        .car_search{
+                            outline:none;
+                            position:absolute;
+                            text-align:center;
+                            margin: 0px 400px 0px 400px;
+                            width:1120px;
+                            height:250px;
+                            display:block;
+                        }
+                        input:focus{
+                            outline:none;
+                        }
+                        .car_searchbar{
+                            width:460px;
+                            border:0;
+                            background-color:#F6F8FA;
+                            font-family:'InterparkGothic';
+                            font-size:14pt;
+                            border-bottom:3px solid #000000;
+                        }
+                        .car_search_choice{
+                            position:absolute;
+                            margin: 250px 400px 0px 400px;
+                            width:1120px;
+                            height:240px;
+                            display:block;
+                            background-color:#ffffff;
+                            }
+                        .choice_nav{
+                            position:absolute;
+                            width:920px;
+                            height:120px;
+                            margin: 0px 100px 0px 100px;
+                            background-color:blue;
+                        }
+                        .choice_menu{
+                            position:absolute;
+                            width:920px;
+                            height:120px;
+                            margin:0px 0px 0px 220px;
+                        }
+                        .choice_menu_ul{
+                            position:absolute;
+                            list-style-type:none;
+                            margin:50px 100px 0px -40px;
+                        }
+                        ul.choice_menu_ul{
+                            position:absolute;
+                            list-style-type:none;
+                            margin:50px 100px 0px -50px;
+                        }
+                        ul.choice_menu_ul li{ 
+                            float:left;
+                            padding-left:15px;
+                            font-size:15pt;
+                            text-decoration: none;
+                            text-align: center;
+                            padding: 10px;
+                            display: block;
+                            border-right: 1px solid #222;
+                            cursor: pointer;
+                        }
+                        ul.choice_menu_ul li:last-child {
+                            border-right: none;
+                        }
+                        ul.choice_menu_ul li.current{ 
+                            background: #ffffff;
+                            color: #87CEEB;
+                        }
+                        .choice_list{
+                            position:absolute;
+                            width:1090px;
+                            height:120px;
+                            margin: 340px 400px 0px 400px;
+                            display:none;
+                            background: #ffffff;
+                            padding: 15px;
+                        }
+                        .choice_list.current{
+                            display: inherit;
+                        }
+                        .choice_list_design{
+                            position:absolute;
+                            margin:0px 0px 0px 200px;
+                            padding-left:60px;
+                        }
+                        select option[value=""][disabled] {
+                            display: none;
+                        }
+                        .select_design_country{
+                            margin-left:10px;
+                            margin-top:1px;
+                            width:80px;
+                            height:50px;
+                            font-family:'InterparkGothicBold';
+                            border-radius:5px;
+                            background-color:#F6F8FA;
+                            
+                
+                        }
+                        .select_design{
+                            margin-left:10px;
+                            margin-top:1px;
+                            width:120px;
+                            height:50px;
+                            background-color:#F6F8FA;
+                            font-family:'InterparkGothicBold';
+                            border-radius:5px;
+                        }
+                        .search_button_design{
+                            position:absolute;
+                            margin-left:10px;
+                            margin-top:1px;
+                            width:120px;
+                            height:50px;
+                            border-radius:5px;
+                            border:0;
+                            font-size:15px;
+                            font-family:'InterparkGothicBold';
+                            color:#ffffff;
+                            background-color:#87CEEB;
+                        }
+                    .section4{
+                        margin:0;
+                        width:1920px;
+                        height:540px; /* +180px */
                     }
-    
-                    .sign a:hover{
-                        color:#87CEEB;
+                    .footer{
+                        margin:0;
+                        width:1920px;
+                        height:216px; /* -180px */
+                        text-align:center;
                     }
-                    .logo{
-                        position:absolute;
-                        margin:72px 0px 0px 0px;
+                    .recommand_text{
+                        margin-left:400px;
+                        margin-top:80px;
+                        font-family:'InterparkGothicBold';
+                        font-size:26pt;
+                        font-weight:700;
                     }
-                    .logo_size{
-                        width:40%;
-                        height:40%;
-                    }
-                    .menu{
-                        position:absolute;
-                        list-style-type:none;
-                        margin-left:190px;
-                        margin-top:160px;
-                    }
-                    .menu li{
-                        float:left;
-                        padding-left:8px;
-                        font-size:15pt;
-                    }
-                    .menu a{
-                        float:left;
-                        text-decoration:none;
-                        font-size:22px;
-                        color:Black;
-                    }
-    
-                    .menu a.active,.menu a:hover{
-                        color:#87CEEB;
-                    }
-                .section2{
-                    margin:0;
-                    width:1920px;
-                    height:540px;
-                }
-                    .ad{
+                    .month_recommand_list{
                         width:1120px;
                         height:540px;
                         margin: 0px 400px 0px 400px;
                         display:block;
-                        background-color:rgb(120, 177, 177);
                     }
-                    .ad_size{
-                        width:100%;
-                        height:100%;
+                    .car_list1{
+                        width:360px;
+                        height:540px;
+                        display:block;    
                     }
-                .section3{
-                    margin:0;
-                    width:1920px;
-                    height:540px;
-                    background-color:#F6F8FA;
-                }
-                    .search_text{
-                        margin-top:80px;
-                        font-family:'InterparkGothicBold';
-                        text-align:center;
-                        font-size:26pt;
-                        font-weight:700;
-                    }
-                    .car_search{
-                        outline:none;
-                        position:absolute;
-                        text-align:center;
-                        margin: 0px 400px 0px 400px;
-                        width:1120px;
-                        height:250px;
-                        display:block;
-                    }
-                    input:focus{
-                        outline:none;
-                    }
-                    .car_searchbar{
-                        width:460px;
-                        border:0;
-                        background-color:#F6F8FA;
-                        font-family:'InterparkGothic';
-                        font-size:14pt;
-                        border-bottom:3px solid #000000;
-                    }
-                    .car_search_choice{
-                        position:absolute;
-                        margin: 250px 400px 0px 400px;
-                        width:1120px;
-                        height:240px;
-                        display:block;
-                        background-color:#ffffff;
+                        .car_img1{
+                            position:absolute;
+                            margin:0px 0px 0 0px;
+                            width:360px;
+                            height:300px;
+                            display:block;
                         }
-                    .choice_nav{
-                        position:absolute;
-                        width:920px;
-                        height:120px;
-                        margin: 0px 100px 0px 100px;
-                        background-color:blue;
-                    }
-                    .choice_menu{
-                        position:absolute;
-                        width:920px;
-                        height:120px;
-                        margin:0px 0px 0px 220px;
-                    }
-                    .choice_menu_ul{
-                        position:absolute;
-                        list-style-type:none;
-                        margin:50px 100px 0px -40px;
-                    }
-                    ul.choice_menu_ul{
-                        position:absolute;
-                        list-style-type:none;
-                        margin:50px 100px 0px -50px;
-                    }
-                    ul.choice_menu_ul li{ 
-                        float:left;
-                        padding-left:15px;
-                        font-size:15pt;
-                        text-decoration: none;
-                        text-align: center;
-                        padding: 10px;
-                        display: block;
-                        border-right: 1px solid #222;
-                        cursor: pointer;
-                    }
-                    ul.choice_menu_ul li:last-child {
-                        border-right: none;
-                    }
-                    ul.choice_menu_ul li.current{ 
-                        background: #ffffff;
-	                    color: #87CEEB;
-                    }
-                    .choice_list{
-                        position:absolute;
-                        width:1090px;
-                        height:120px;
-                        margin: 340px 400px 0px 400px;
-                        display:none;
-                        background: #ffffff;
-                        padding: 15px;
-                    }
-                    .choice_list.current{
-                        display: inherit;
-                    }
-                    .choice_list_design{
-                        position:absolute;
-                        margin:0px 0px 0px 200px;
-                        padding-left:20px;
-                    }
-                    select option[value=""][disabled] {
-	                    display: none;
-                    }
-                    .select_design_country{
-                        margin-left:10px;
-                        margin-top:1px;
-                        width:80px;
-                        height:50px;
-                        font-family:'InterparkGothicBold';
-                        border-radius:5px;
-                        background-color:#F6F8FA;
-                        
-            
-                    }
-                    .select_design{
-                        margin-left:10px;
-                        margin-top:1px;
-                        width:120px;
-                        height:50px;
-                        background-color:#F6F8FA;
-                        font-family:'InterparkGothicBold';
-                        border-radius:5px;
-                    }
-                    .search_button_design{
-                        position:absolute;
-                        margin-left:10px;
-                        margin-top:1px;
-                        width:120px;
-                        height:50px;
-                        border-radius:5px;
-                        border:0;
-                        font-size:15px;
-                        font-family:'InterparkGothicBold';
-                        color:#ffffff;
-                        background-color:#87CEEB;
-                    }
-                .section4{
-                    margin:0;
-                    width:1920px;
-                    height:540px; /* +180px */
-                }
-                .section5{
-                    margin:0;
-                    width:1920px;
-                    height:216px; /* -180px */
-                    background-color:#F6F8FA;
-                }
-                .footer{
-                    margin:0;
-                    width:1920px;
-                    height:216px; /* -180px */
-                    text-align:center;
-                }
-                .recommand_text{
-                    margin-left:400px;
-                    margin-top:80px;
-                    font-family:'InterparkGothicBold';
-                    font-size:26pt;
-                    font-weight:700;
-                }
-                .month_recommand_list{
-                    width:1120px;
-                    height:540px;
-                    margin: 0px 400px 0px 400px;
-                    display:block;
-                }
-                .car_list1{
-                    width:360px;
-                    height:540px;
-                    display:block;    
-                }
-                    .car_img1{
-                        position:absolute;
-                        margin:0px 0px 0 0px;
+                        .car_img_size_1{
+                            width:360px;
+                            height:300px;
+                            border-radius:8px;
+                        }
+                        .car_summary_1{
+                            position:absolute;
+                            width:453px;
+                            margin-top:300px;
+                            padding:0;
+                        }
+                    .car_list2{
                         width:360px;
-                        height:300px;
+                        height:540px;
+                        margin-top:-540px;
+                        margin-left:374px;
                         display:block;
                     }
-                    .car_img_size_1{
+                        .car_img2{
+                            position:absolute;
+                            margin:0px 0px 0 0px;
+                            width:360px;
+                            height:300px;
+                            display:block;
+                        }
+                        .car_img_size_2{
+                            width:360px;
+                            height:300px;
+                            border-radius:8px;
+                        }
+                        .car_summary_2{
+                            position:absolute;
+                            margin-top:300px;
+                            margin-left:0px;
+                            padding:0;
+                        }
+                    .car_list3{
                         width:360px;
-                        height:300px;
-                        border-radius:8px;
-                    }
-                    .car_summary_1{
-                        position:absolute;
-                        width:453px;
-                        margin-top:300px;
-                        padding:0;
-                    }
-                .car_list2{
-                    width:360px;
-                    height:540px;
-                    margin-top:-540px;
-                    margin-left:374px;
-                    display:block;
-                }
-                    .car_img2{
-                        position:absolute;
-                        margin:0px 0px 0 0px;
-                        width:360px;
-                        height:300px;
+                        height:540px;
+                        margin-top:-540px;
+                        margin-left:748px;
                         display:block;
                     }
-                    .car_img_size_2{
-                        width:360px;
-                        height:300px;
-                        border-radius:8px;
-                    }
-                    .car_summary_2{
-                        position:absolute;
-                        margin-top:300px;
-                        margin-left:0px;
-                        padding:0;
-                    }
-                .car_list3{
-                    width:360px;
-                    height:540px;
-                    margin-top:-540px;
-                    margin-left:748px;
-                    display:block;
-                }
-                    .car_img3{
-                        position:absolute;
-                        margin:0px 0px 0 0px;
-                        width:360px;
-                        height:300px;
-                        display:block;
-                 
-                    }
-                    .car_img_size_3{
-                        width:360px;
-                        height:300px;
-                        border-radius:8px;
-                    }
-                    .car_summary_3{
-                        position:absolute;
-                        margin-top:300px;
-                        padding:0;
-                    }
+                        .car_img3{
+                            position:absolute;
+                            margin:0px 0px 0 0px;
+                            width:360px;
+                            height:300px;
+                            display:block;
+                     
+                        }
+                        .car_img_size_3{
+                            width:360px;
+                            height:300px;
+                            border-radius:8px;
+                        }
+                        .car_summary_3{
+                            position:absolute;
+                            margin-top:300px;
+                            padding:0;
+                        }

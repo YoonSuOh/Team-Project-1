@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="utf-8"%>
 <%@ page import="java.io.*" %>
 <%@ page import="Car.CarDAO" %>
 <%@ page import="Car.Car" %>
@@ -12,6 +12,7 @@
     </head>
     <body id="all_content"> 
          	<% 
+         	  request.setCharacterEncoding("utf-8");
               String user_id = (String)session.getAttribute("USER_ID");
         	  String perm = (String)session.getAttribute("USER_PERM");
         	  int pageNumber = 1;
@@ -129,7 +130,7 @@
             <div class="list">
                 <div class="search">
                     <div class="searchbar">
-                        <form action="CarsSearch.jsp" method="post" name="search">
+                        <form action="CarsSearch.jsp" method="post">
                             <input class="searchs" type="search" placeholder="검색어 입력" name="model_search">
                             <button class="button">검색</button>
                         </form>
@@ -144,7 +145,14 @@
                         <ul class="car">
                         	<%
                         		CarDAO carDAO = new CarDAO();
-                        		ArrayList<Car> list = carDAO.getList(pageNumber);
+                        	ArrayList<Car> list = carDAO.getEasy_Search3(request.getParameter("car_kind"), Integer.parseInt(request.getParameter("low_year")),Integer.parseInt(request.getParameter("high_year")));
+                        		if (list.size() == 0){
+                        			PrintWriter script = response.getWriter();
+                        			script.println("<script>");
+                        			script.println("alert('검색결과가 없습니다.')");
+                        			script.println("history.back()");
+        							script.println("</script>");
+                        		}
                         		for(int i=0; i<list.size();i++){
                         	%>
                         	<ul class="car_li">
