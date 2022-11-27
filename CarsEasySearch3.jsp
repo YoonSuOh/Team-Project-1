@@ -179,7 +179,7 @@
                     	<ul class="pageBtn_ul">
 	                    	<% if(pageNumber != 1){ %>
 	                    	<li>
-	                    		<a class="pageBtn_move" href="Cars.jsp?pageNumber=<%=pageNumber - 1 %>" >이전 페이지</a>
+	                    		<a class="pageBtn_move" href="CarsEasySearch3.jsp?pageNumber=<%=pageNumber - 1 %>" >이전 페이지</a>
 	                    	</li>
 							<% } else {%>	
 	                    	<li>
@@ -187,11 +187,11 @@
 	                    	</li>
 	                    	<% } %>
 	                    	<li>
-	                    		<a class="pageBtn_now" href="Cars.jsp?pageNumber=<%=pageNumber %>"><%=pageNumber %></a>
+	                    		<a class="pageBtn_now" href="CarsEasySearch3.jsp?pageNumber=<%=pageNumber %>"><%=pageNumber %></a>
 	                    	</li>
 	                    	<% if(carDAO.nextPage(pageNumber + 1)){ %>
 	                    	<li>
-	                    		<a class="pageBtn_move" href="Cars.jsp?pageNumber=<%=pageNumber + 1 %>">다음 페이지</a>	
+	                    		<a class="pageBtn_move" href="CarsEasySearch3.jsp?pageNumber=<%=pageNumber + 1 %>">다음 페이지</a>	
 	                    	</li>
 	                    	<% } else {%>
 	                    	<li>

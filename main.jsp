@@ -173,10 +173,10 @@
                               <option value="gv80" class="제네시스">GV80</option>
                               <option value="모닝" class="기아">모닝</option>
                               <option value="레이" class="기아">레이</option>
-                              <option value="k3" class="기아">K3</option>
-                              <option value="k5" class="기아">K5</option>
-                              <option value="k7" class="기아">K7</option>
-                              <option value="k9" class="기아">K9</option>
+                              <option value="K3" class="기아">K3</option>
+                              <option value="K5" class="기아">K5</option>
+                              <option value="K7" class="기아">K7</option>
+                              <option value="K9" class="기아">K9</option>
                               <option value="셀토스" class="기아">셀토스</option>
                               <option value="스포티지" class="기아">스포티지</option>
                               <option value="쏘렌토" class="기아">쏘렌토</option>
@@ -246,13 +246,13 @@
                               <option value="GV70" class="gv70">GV70</option>
                               <option value="GV80" class="gv80">GV80</option>
                               <option value="GV90" class="gv90">GV90</option>                              
-                              <option value="더 뉴 K3" class="k3">더 뉴 K3</option>
-                              <option value="더 뉴 K3(2세대)" class="k3">더 뉴 K3(2세대)</option>
-                              <option value="더 뉴 K3 GT(2세대)" class="k3">더 뉴 K3 GT(2세대)</option>
-                              <option value="올 뉴 K3" class="k3">올 뉴 K3</option>
-                              <option value="K3 GT" class="k3">K3 GT</option>
-                              <option value="더 뉴 K3" class="k3">더 뉴 K3</option>
-                              <option value="K3" class="k3">K3</option>
+                              <option value="더 뉴 K3" class="K3">더 뉴 K3</option>
+                              <option value="더 뉴 K3(2세대)" class="K3">더 뉴 K3(2세대)</option>
+                              <option value="더 뉴 K3 GT(2세대)" class="K3">더 뉴 K3 GT(2세대)</option>
+                              <option value="올 뉴 K3" class="K3">올 뉴 K3</option>
+                              <option value="K3 GT" class="K3">K3 GT</option>
+                              <option value="더 뉴 K3" class="K3">더 뉴 K3</option>
+                              <option value="K3" class="K3">K3</option>
                             </select>   
                           <input class="search_button_design" type="submit" value="검색">
                       </form>
