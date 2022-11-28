@@ -4,8 +4,8 @@
     pageEncoding="UTF-8"%>
 <% request.setCharacterEncoding("utf-8"); %>
 <jsp:useBean id="bbs" class="bbs.Bbs" scope="page" />
-<jsp:setProperty name="bbs" property="bbsTitle" />
-<jsp:setProperty name="bbs" property="bbsContent" />
+<jsp:setProperty name="bbs" property="title" />
+<jsp:setProperty name="bbs" property="content" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,8 +16,8 @@
 	<%
 		// 현재 세션 상태를 체크한다
 		String userID = null;
-		if(session.getAttribute("user_id") != null){
-			userID = (String)session.getAttribute("user_id");
+		if(session.getAttribute("USER_ID") != null){
+			userID = (String)session.getAttribute("USER_ID");
 		}
 		// 로그인을 한 사람만 글을 쓸 수 있도록 코드를 수정한다
 		if(userID == null){
@@ -36,6 +36,8 @@
 				script.println("</script>");
 			}else{
 				// 정상적으로 입력이 되었다면 글쓰기 로직을 수행한다
+				request.getParameter("title");
+				request.getParameter("content");
 				BbsDAO bbsDAO = new BbsDAO();
 				int result = bbsDAO.write(bbs.getComment_cord(), bbs.getUser_nick(), bbs.getPerm() ,bbs.getB_date(), bbs.getTitle(), bbs.getContent(), bbs.getUser_id());
 				// 데이터베이스 오류인 경우

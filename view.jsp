@@ -17,8 +17,8 @@
 	<%
 		// 메인 페이지로 이동했을 때 세션에 값이 담겨있는지 체크
 		String userID = null;
-		if(session.getAttribute("user_id") != null){
-			userID = (String)session.getAttribute("user_id");
+		if(session.getAttribute("USER_ID") != null){
+			userID = (String)session.getAttribute("USER_ID");
 		}
 		
 		// bbsID를 초기화 시키고

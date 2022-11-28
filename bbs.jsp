@@ -24,8 +24,8 @@
 	<%
 		// 메인 페이지로 이동했을 때 세션에 값이 담겨있는지 체크
 		String userID = null;
-		if(session.getAttribute("user_id") != null){
-			userID = (String)session.getAttribute("user_id");
+		if(session.getAttribute("USER_ID") != null){
+			userID = (String)session.getAttribute("USER_ID");
 		}
 		int pageNumber = 1; //기본은 1 페이지를 할당
 		// 만약 파라미터로 넘어온 오브젝트 타입 'pageNumber'가 존재한다면

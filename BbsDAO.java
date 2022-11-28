@@ -68,7 +68,7 @@ public class BbsDAO {
 			pstmt.setInt(2, comment_cord);
 			pstmt.setString(3, user_nick);
 			pstmt.setString(4, perm);
-			pstmt.setString(5, b_date);
+			pstmt.setString(5, getDate());
 			pstmt.setString(6, title);
 			pstmt.setString(7, content);
 			pstmt.setString(8, user_id);
