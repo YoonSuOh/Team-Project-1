@@ -58,21 +58,18 @@ public class BbsDAO {
 	}
 	
 	//글쓰기 메소드
-	public int write(int comment_cord,
-			String user_nick, String perm, String b_date, String title,
-			String content, String user_id) {
-		String sql = "insert into board values(?, ?, ?, ?, ?, ?, ?, ?, ?)";
+	public int write(String user_nick, String perm, String b_date, String title, String content, String user_id) {
+		String sql = "insert into board values(?, ?, ?, ?, ?, ?, ?, ?)";
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, getNext());
-			pstmt.setInt(2, comment_cord);
-			pstmt.setString(3, user_nick);
-			pstmt.setString(4, perm);
-			pstmt.setString(5, getDate());
-			pstmt.setString(6, title);
-			pstmt.setString(7, content);
-			pstmt.setString(8, user_id);
-			pstmt.setInt(9, 1); //글의 유효번호
+			pstmt.setString(2, user_nick);
+			pstmt.setString(3, perm);
+			pstmt.setString(4, getDate());
+			pstmt.setString(5, title);
+			pstmt.setString(6, content);
+			pstmt.setString(7, user_id);
+			pstmt.setInt(8, 1); //글의 유효번호
 			return pstmt.executeUpdate();
 		}catch (Exception e) {
 			e.printStackTrace();
@@ -82,7 +79,7 @@ public class BbsDAO {
 	
 	//게시글 리스트 메소드
 	public ArrayList<Bbs> getList(int pageNumber){
-		String sql = "select * from board where b_cord < ? and b_num = 1 AND ROWNUM <= 10 ORDER BY b_cord desc";
+		String sql = "select * from board where b_cord < ? and b_cord_available = 1 AND ROWNUM <= 10 ORDER BY b_cord desc";
 		ArrayList<Bbs> list = new ArrayList<Bbs>();
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -91,14 +88,13 @@ public class BbsDAO {
 			while(rs.next()) {
 				Bbs bbs = new Bbs();
 				bbs.setB_cord(rs.getInt(1));
-				bbs.setComment_cord(rs.getInt(2));
-				bbs.setB_num(rs.getInt(3));
-				bbs.setUser_nick(rs.getString(4));
-				bbs.setPerm(rs.getString(5));
-				bbs.setB_date(rs.getString(6));
-				bbs.setTitle(rs.getString(7));
-				bbs.setContent(rs.getString(8));
-				bbs.setUser_id(rs.getString(9));
+				bbs.setUser_nick(rs.getString(2));
+				bbs.setPerm(rs.getString(3));
+				bbs.setB_date(rs.getString(4));
+				bbs.setTitle(rs.getString(5));
+				bbs.setContent(rs.getString(6));
+				bbs.setUser_id(rs.getString(7));
+				bbs.setB_cord_available(rs.getInt(8));
 				list.add(bbs);
 			}
 		}catch (Exception e) {
@@ -109,7 +105,7 @@ public class BbsDAO {
 	
 	//페이징 처리 메소드
 	public boolean nextPage(int pageNumber) {
-		String sql = "select * from board where b_cord < ? and b_num = 1";
+		String sql = "select * from board where b_cord < ? and b_cord_available = 1";
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, getNext() - (pageNumber - 1) * 10);
@@ -133,14 +129,13 @@ public class BbsDAO {
 			if(rs.next()) {
 				Bbs bbs = new Bbs();
 				bbs.setB_cord(rs.getInt(1));
-				bbs.setComment_cord(rs.getInt(2));
-				bbs.setB_num(rs.getInt(3));
-				bbs.setUser_nick(rs.getString(4));
-				bbs.setPerm(rs.getString(5));
-				bbs.setB_date(rs.getString(6));
-				bbs.setTitle(rs.getString(7));
-				bbs.setContent(rs.getString(8));
-				bbs.setUser_id(rs.getString(9));
+				bbs.setUser_nick(rs.getString(2));
+				bbs.setPerm(rs.getString(3));
+				bbs.setB_date(rs.getString(4));
+				bbs.setTitle(rs.getString(5));
+				bbs.setContent(rs.getString(6));
+				bbs.setUser_id(rs.getString(7));
+				bbs.setB_cord_available(rs.getInt(8));
 				return bbs;
 			}
 		}catch (Exception e) {
@@ -166,7 +161,7 @@ public class BbsDAO {
 		//게시글 삭제 메소드
 		public int delete(int b_cord) {
 			//실제 데이터를 삭제하는 것이 아니라 게시글 유효숫자를 '0'으로 수정한다
-			String sql = "update board set b_num = 0 where b_cord = ?";
+			String sql = "update board set b_cord = 0 where b_cord = ?";
 			try {
 				PreparedStatement pstmt = conn.prepareStatement(sql);
 				pstmt.setInt(1, b_cord);

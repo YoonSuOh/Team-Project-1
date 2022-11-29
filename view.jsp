@@ -24,8 +24,8 @@
 		// bbsID를 초기화 시키고
 		// 'bbsID'라는 데이터가 넘어온 것이 존재한다면 캐스팅을 하여 변수에 담는다
 		int bbsID = 0;
-		if(request.getParameter("b_cord") != null){
-			bbsID = Integer.parseInt(request.getParameter("b_cord"));
+		if(request.getParameter("bbsID") != null){
+			bbsID = Integer.parseInt(request.getParameter("bbsID"));
 		}
 		
 		// 만약 넘어온 데이터가 없다면
