@@ -24,7 +24,7 @@
         .logo {
             display: block;
             text-align: center;
-            width: 20%;
+            width: 10%;
         }
 
         * {
@@ -55,7 +55,7 @@
             border-bottom: 1.5px solid #adadad;
             margin: 10px;
             padding: 20px 10px;
-            width: 50%;
+            width: 90%;
         }
 
         .name {
@@ -108,6 +108,7 @@
             font-size: 18px;
             border-radius: 3px;
             font-family:'InterparkGothicBold';
+            margin-left : 35%;
         }
 
         .btn:hover {
