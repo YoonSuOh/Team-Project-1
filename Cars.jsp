@@ -35,11 +35,11 @@
                   </div>
                   <div>
                       <ul class="menu">
-                          <li><a href="board_report.jsp">신고</a></li>
+                          <li><a href="bbs_report.jsp">신고</a></li>
                           <li>|</li>
                           <li><a href="Cars.jsp">전체 차량 보기</a></li>
                           <li>|</li>
-                          <li><a href="board.jsp">게시판</a></li>
+                          <li><a href="bbs.jsp">게시판</a></li>
                       </ul>
                   </div>
               </div>
@@ -61,11 +61,11 @@
                   </div>
                   <div>
                       <ul class="menu">
-                          <li><a href="board_report.jsp">신고</a></li>
+                          <li><a href="bbs_report.jsp">신고</a></li>
                           <li>|</li>
                           <li><a href="Cars.jsp">전체 차량 보기</a></li>
                           <li>|</li>
-                          <li><a href="board.jsp">게시판</a></li>
+                          <li><a href="bbs.jsp">게시판</a></li>
                       </ul>
                   </div>
               </div>
@@ -89,11 +89,11 @@
                   </div>
                   <div>
                       <ul class="menu">
-                          <li><a href="board_report.jsp">신고</a></li>
+                          <li><a href="bbs_report.jsp">신고</a></li>
                           <li>|</li>
                           <li><a href="Cars.jsp">전체 차량 보기</a></li>
                           <li>|</li>
-                          <li><a href="board.jsp">게시판</a></li>
+                          <li><a href="bbs.jsp">게시판</a></li>
                       </ul>
                   </div>
               </div>
@@ -113,11 +113,11 @@
                   </div>
                   <div>
                       <ul class="menu">
-                          <li><a href="board_report.jsp">신고</a></li>
+                          <li><a href="bbs_report.jsp">신고</a></li>
                           <li>|</li>
                           <li><a href="Cars.jsp">전체 차량 보기</a></li>
                           <li>|</li>
-                          <li><a href="board.jsp">게시판</a></li>
+                          <li><a href="bbs.jsp">게시판</a></li>
                           <li>|</li>
                           <li><a href="addCar.jsp">차량등록</a></li>
                       </ul>
