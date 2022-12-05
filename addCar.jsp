@@ -29,6 +29,7 @@
 	text-decoration: none;
 	font-family: sans-serif;
 	padding: 0px;
+	font-family: 'InterparkGothicBold';
 }
 
 .main {
