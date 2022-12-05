@@ -1,13 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-	pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ID찾기</title>
-<style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PW찾기</title>
+    <style>
 @font-face {
 	font-family: 'InterparkGothic';
 	/*font 이름*/
@@ -115,17 +115,20 @@
 </style>
 </head>
 <body>
-	<form action="find_id_action.jsp" method="post">
+    <form action="find_pw_action.jsp" method="post">
 		<div class="search-title">
-			<h3>ID 찾기</h3>
+			<h3>PW 찾기</h3>
 		</div>
 		<section class="form-search">
-			<div class="find-name">
-					<div class = "textForm"><input type="text" name="user_name"class ="name"
-						placeholder="이름 입력"></div>
+			<div class="find-ID">
+				<p>
+					<div class = "textForm"><input type="text" name="user_ID" class ="name"
+						placeholder="ID 입력"></div>
 			</div>
+			<br>
 			<div class="find-email">
-					<div class = "textForm"> <input type="text" name="user_email" class ="name"
+				<p>
+					<div class = "textForm"><input type="text" name="user_email" class ="name"
 						placeholder="이메일 입력"></div>
 			</div>
 		</section>
@@ -136,7 +139,5 @@
 		</div>
 
 	</form>
-
-
 </body>
 </html>
